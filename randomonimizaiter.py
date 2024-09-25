@@ -1,8 +1,12 @@
 def write_file(path, text):
     with open(path, "a") as z:
         z.write(str(text) + "\n")
+def clear_file(path):
+    with open(path, "w") as z:
+        z.write("")
 from random import randint
 from time import time
+print("randomonimizaiter v1.2 by m1cro_cat")
 mx = 0
 mn = 0
 total = 0
@@ -26,6 +30,7 @@ for _ in range(count):
         total += i
         lst.append(i)
 lst.sort(reverse=True)
+clear_file("test.txt")
 end_time = time()
 for i in lst:
     print(i)
@@ -34,4 +39,4 @@ print("общее количество - ", count)
 print("максимальное - ",mx)
 print("минимальное -",mn)
 print("среднее число -", int(total / count))
-print("время -", round(end_time - start_time, 4))
+print("время -", round(end_time - start_time, 3))
