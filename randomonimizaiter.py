@@ -6,7 +6,7 @@ def clear_file(path):
         z.write("")
 from random import randint
 from time import time
-print("randomonimizaiter v1.2 by m1cro_cat")
+print("randomonimizaiter v1.3 by m1cro_cat")
 mx = 0
 mn = 0
 total = 0
@@ -39,4 +39,6 @@ print("общее количество - ", count)
 print("максимальное - ",mx)
 print("минимальное -",mn)
 print("среднее число -", int(total / count))
+print("медиана -", lst[count//2])
+print("размах -", lst[0] - lst[count - 1])
 print("время -", round(end_time - start_time, 3))
